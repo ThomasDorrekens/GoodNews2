@@ -32,14 +32,23 @@ function geneseControllerFunction()
     return $controller;
 }
 
+/**
+ * @return LivresController
+ */
+function livresControllerFunction()
+{
+    require_once('controllers/LivresController.php');
+    $controller = new LivresController();
+    return $controller;
+}
+
 switch($action) {
 		case 'genese':
 			$controller = geneseControllerFunction();
             break;
 		case 'livres':
-			require_once('controllers/LivresController.php');	
-			$controller = new LivresController();
-			break;
+			$controller = livresControllerFunction();
+            break;
 		case 'contact':
 			require_once('controllers/ContactController.php');	
 			$controller = new ContactController();
