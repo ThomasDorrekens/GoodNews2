@@ -52,6 +52,16 @@ function conctactControllerFunction()
     return $controller;
 }
 
+/**
+ * @return AccueilController
+ */
+function accueilControllerFunction()
+{
+    require_once('controllers/AccueilController.php');
+    $controller = new AccueilController();
+    return $controller;
+}
+
 switch($action) {
 		case 'genese':
 			$controller = geneseControllerFunction();
@@ -63,9 +73,8 @@ switch($action) {
 			$controller = conctactControllerFunction();
             break;
 		default: # Par défaut, le contrôleur de l'accueil est sélectionné
-			require_once('controllers/AccueilController.php');	
-			$controller = new AccueilController();
-			break;
+			$controller = accueilControllerFunction();
+            break;
 	}
 	# Exécution du contrôleur correspondant à l'action demandée
 	$controller->run();
