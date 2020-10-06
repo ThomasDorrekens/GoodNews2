@@ -1,4 +1,5 @@
 <?php
+// Salut Jehan tu me vois ou pas ?
 class Db
 {
     private static $instance = null;
