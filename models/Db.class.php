@@ -1,6 +1,7 @@
 <?php
 // Salut Jehan tu me vois ou pas ?
 // Oui et toi tu me vois?
+//commentaire 3
 class Db
 {
     private static $instance = null;
